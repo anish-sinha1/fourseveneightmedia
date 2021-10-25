@@ -1,6 +1,5 @@
 .navbar {
   display: flex;
-  justify-content: center;
   padding: 1rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 3rem;
@@ -9,8 +8,16 @@
   }
   .navbar-links {
     display: flex;
+    place-items: center;
     .navbar-link {
       margin-right: 1rem;
+      &__avatar {
+        cursor: pointer;
+      }
     }
   }
+}
+
+.navbar-skeleton {
+  min-height: 4rem;
 }

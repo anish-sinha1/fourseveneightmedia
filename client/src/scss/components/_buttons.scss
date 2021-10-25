@@ -209,5 +209,12 @@
   &-action {
     border: 1px solid $color-black;
     color: $color-black;
+    &__nooutline {
+      border: none;
+    }
+    &__darkmode {
+      border: 1px solid $color-white;
+      color: $color-white;
+    }
   }
 }

@@ -20,6 +20,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dark-mode {
+  background-color: #323639;
+  color: $color-white;
+}
+
+.light-mode {
+  background-color: $color-white;
+  color: $color-black;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -27,7 +37,7 @@ code {
 
 a {
   text-decoration: none;
-  color: $color-black;
+  color: inherit;
 }
 
 ul {

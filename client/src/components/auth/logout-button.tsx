@@ -11,7 +11,11 @@ const LogoutButton: React.FC = () => {
   return (
     <Fragment>
       <div>
-        <button type="button" onClick={handleLogoutClick}>
+        <button
+          type="button"
+          className="btn-aux btn-aux-action__nooutline"
+          onClick={handleLogoutClick}
+        >
           Logout
         </button>
       </div>
