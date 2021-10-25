@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model post {
+  title     String   @db.VarChar(500)
+  content   String
+  post_id   Int      @id @default(autoincrement())
+  createdAt DateTime @default(dbgenerated("CURRENT_DATE")) @db.Date
+  deleted   Boolean  @default(false)
+  imageUri  String   @db.VarChar(250)
+  imageAlt  String   @db.VarChar(250)
+  slug      String   @db.VarChar(500)
+  summary   String   @db.VarChar(500)
+  category  String   @db.VarChar(50)
+  tags      String[] @db.VarChar(20)
+  user_id   String   @db.VarChar(25)
+  likes     String[] @db.VarChar(25)
+}
+
+model profile {
+  profile_id     Int      @id @default(autoincrement())
+  bio            String?  @db.VarChar(1000)
+  spaces         String[] @db.VarChar(25)
+  followers      String[] @db.VarChar(25)
+  following      String[] @db.VarChar(25)
+  user_id        String   @db.VarChar(50)
+  picture        String   @default("fse-default-profile") @db.VarChar(50)
+  username       String   @db.VarChar(25)
+  email          String   @db.VarChar(100)
+  email_verified Boolean
+  deleted        Boolean  @default(false)
+}
